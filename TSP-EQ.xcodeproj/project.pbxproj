@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED209EFD1FC2EFA9006F4D1F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED209EFC1FC2EFA9006F4D1F /* main.cpp */; };
+		EDCB9E8F1FC336C700C5C8A4 /* csvparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDCB9E8D1FC336C700C5C8A4 /* csvparser.cpp */; };
+		EDCB9E961FC33B3400C5C8A4 /* tspnet_impl.hpp in Sources */ = {isa = PBXBuildFile; fileRef = EDCB9E951FC33B3400C5C8A4 /* tspnet_impl.hpp */; };
+		EDCB9E9C1FC33BBF00C5C8A4 /* tsplayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDCB9E9A1FC33BBF00C5C8A4 /* tsplayer.cpp */; };
+		EDCB9E9F1FC33BDC00C5C8A4 /* tspneuron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDCB9E9E1FC33BDC00C5C8A4 /* tspneuron.cpp */; };
+		EDCB9EA21FC33DC300C5C8A4 /* tsplink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDCB9EA01FC33DC300C5C8A4 /* tsplink.cpp */; };
+		EDD33C451FC4CCFD008C9447 /* tspset_impl.hpp in Sources */ = {isa = PBXBuildFile; fileRef = EDD33C431FC4CCFD008C9447 /* tspset_impl.hpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ED209EF71FC2EFA9006F4D1F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ED209EF91FC2EFA9006F4D1F /* TSP-EQ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "TSP-EQ"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED209EFC1FC2EFA9006F4D1F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EDCB9E8D1FC336C700C5C8A4 /* csvparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = csvparser.cpp; path = csvparser/csvparser.cpp; sourceTree = "<group>"; };
+		EDCB9E8E1FC336C700C5C8A4 /* csvparser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = csvparser.hpp; path = csvparser/csvparser.hpp; sourceTree = "<group>"; };
+		EDCB9E941FC33B3400C5C8A4 /* tspnet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tspnet.hpp; path = tspeq/tspnet/tspnet.hpp; sourceTree = "<group>"; };
+		EDCB9E951FC33B3400C5C8A4 /* tspnet_impl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tspnet_impl.hpp; path = tspeq/tspnet/tspnet_impl.hpp; sourceTree = "<group>"; };
+		EDCB9E9A1FC33BBF00C5C8A4 /* tsplayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tsplayer.cpp; path = tspeq/tspnet/tsplayer.cpp; sourceTree = "<group>"; };
+		EDCB9E9B1FC33BBF00C5C8A4 /* tsplayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tsplayer.hpp; path = tspeq/tspnet/tsplayer.hpp; sourceTree = "<group>"; };
+		EDCB9E9D1FC33BDC00C5C8A4 /* tspneuron.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tspneuron.hpp; path = tspeq/tspnet/tspneuron.hpp; sourceTree = "<group>"; };
+		EDCB9E9E1FC33BDC00C5C8A4 /* tspneuron.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tspneuron.cpp; path = tspeq/tspnet/tspneuron.cpp; sourceTree = "<group>"; };
+		EDCB9EA01FC33DC300C5C8A4 /* tsplink.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tsplink.cpp; path = tspeq/tspnet/tsplink.cpp; sourceTree = "<group>"; };
+		EDCB9EA11FC33DC300C5C8A4 /* tsplink.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tsplink.hpp; path = tspeq/tspnet/tsplink.hpp; sourceTree = "<group>"; };
+		EDD33C431FC4CCFD008C9447 /* tspset_impl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tspset_impl.hpp; path = tspeq/tspset/tspset_impl.hpp; sourceTree = "<group>"; };
+		EDD33C441FC4CCFD008C9447 /* tspset.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tspset.hpp; path = tspeq/tspset/tspset.hpp; sourceTree = "<group>"; };
+		EDD33C471FC4CFA1008C9447 /* itspset.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = itspset.hpp; path = tspeq/tspset/itspset.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED209EF61FC2EFA9006F4D1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED209EF01FC2EFA9006F4D1F = {
+			isa = PBXGroup;
+			children = (
+				ED209EFB1FC2EFA9006F4D1F /* TSP-EQ */,
+				ED209EFA1FC2EFA9006F4D1F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED209EFA1FC2EFA9006F4D1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED209EF91FC2EFA9006F4D1F /* TSP-EQ */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED209EFB1FC2EFA9006F4D1F /* TSP-EQ */ = {
+			isa = PBXGroup;
+			children = (
+				EDCB9E8C1FC336BD00C5C8A4 /* csvparser */,
+				ED209F031FC2EFB3006F4D1F /* tspeq */,
+				ED209EFC1FC2EFA9006F4D1F /* main.cpp */,
+			);
+			path = "TSP-EQ";
+			sourceTree = "<group>";
+		};
+		ED209F031FC2EFB3006F4D1F /* tspeq */ = {
+			isa = PBXGroup;
+			children = (
+				EDD33C421FC4CCE8008C9447 /* tspset */,
+				EDCB9E901FC33A0A00C5C8A4 /* tspnet */,
+			);
+			name = tspeq;
+			sourceTree = "<group>";
+		};
+		EDCB9E8C1FC336BD00C5C8A4 /* csvparser */ = {
+			isa = PBXGroup;
+			children = (
+				EDCB9E8D1FC336C700C5C8A4 /* csvparser.cpp */,
+				EDCB9E8E1FC336C700C5C8A4 /* csvparser.hpp */,
+			);
+			name = csvparser;
+			sourceTree = "<group>";
+		};
+		EDCB9E901FC33A0A00C5C8A4 /* tspnet */ = {
+			isa = PBXGroup;
+			children = (
+				EDCB9E9D1FC33BDC00C5C8A4 /* tspneuron.hpp */,
+				EDCB9E9E1FC33BDC00C5C8A4 /* tspneuron.cpp */,
+				EDCB9E941FC33B3400C5C8A4 /* tspnet.hpp */,
+				EDCB9E951FC33B3400C5C8A4 /* tspnet_impl.hpp */,
+				EDCB9E9A1FC33BBF00C5C8A4 /* tsplayer.cpp */,
+				EDCB9E9B1FC33BBF00C5C8A4 /* tsplayer.hpp */,
+				EDCB9EA01FC33DC300C5C8A4 /* tsplink.cpp */,
+				EDCB9EA11FC33DC300C5C8A4 /* tsplink.hpp */,
+			);
+			name = tspnet;
+			sourceTree = "<group>";
+		};
+		EDD33C421FC4CCE8008C9447 /* tspset */ = {
+			isa = PBXGroup;
+			children = (
+				EDD33C471FC4CFA1008C9447 /* itspset.hpp */,
+				EDD33C431FC4CCFD008C9447 /* tspset_impl.hpp */,
+				EDD33C441FC4CCFD008C9447 /* tspset.hpp */,
+			);
+			name = tspset;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED209EF81FC2EFA9006F4D1F /* TSP-EQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED209F001FC2EFA9006F4D1F /* Build configuration list for PBXNativeTarget "TSP-EQ" */;
+			buildPhases = (
+				ED209EF51FC2EFA9006F4D1F /* Sources */,
+				ED209EF61FC2EFA9006F4D1F /* Frameworks */,
+				ED209EF71FC2EFA9006F4D1F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TSP-EQ";
+			productName = "TSP-EQ";
+			productReference = ED209EF91FC2EFA9006F4D1F /* TSP-EQ */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED209EF11FC2EFA9006F4D1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Kirill Korolev";
+				TargetAttributes = {
+					ED209EF81FC2EFA9006F4D1F = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AW37662HE7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = ED209EF41FC2EFA9006F4D1F /* Build configuration list for PBXProject "TSP-EQ" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED209EF01FC2EFA9006F4D1F;
+			productRefGroup = ED209EFA1FC2EFA9006F4D1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED209EF81FC2EFA9006F4D1F /* TSP-EQ */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED209EF51FC2EFA9006F4D1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCB9E9C1FC33BBF00C5C8A4 /* tsplayer.cpp in Sources */,
+				ED209EFD1FC2EFA9006F4D1F /* main.cpp in Sources */,
+				EDCB9E961FC33B3400C5C8A4 /* tspnet_impl.hpp in Sources */,
+				EDCB9E8F1FC336C700C5C8A4 /* csvparser.cpp in Sources */,
+				EDD33C451FC4CCFD008C9447 /* tspset_impl.hpp in Sources */,
+				EDCB9E9F1FC33BDC00C5C8A4 /* tspneuron.cpp in Sources */,
+				EDCB9EA21FC33DC300C5C8A4 /* tsplink.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ED209EFE1FC2EFA9006F4D1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ED209EFF1FC2EFA9006F4D1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ED209F011FC2EFA9006F4D1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = AW37662HE7;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED209F021FC2EFA9006F4D1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = AW37662HE7;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED209EF41FC2EFA9006F4D1F /* Build configuration list for PBXProject "TSP-EQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED209EFE1FC2EFA9006F4D1F /* Debug */,
+				ED209EFF1FC2EFA9006F4D1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED209F001FC2EFA9006F4D1F /* Build configuration list for PBXNativeTarget "TSP-EQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED209F011FC2EFA9006F4D1F /* Debug */,
+				ED209F021FC2EFA9006F4D1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED209EF11FC2EFA9006F4D1F /* Project object */;
+}
