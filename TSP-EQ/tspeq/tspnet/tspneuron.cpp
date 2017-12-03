@@ -17,7 +17,7 @@ namespace tsp { namespace net {
     
     tspneuron::~tspneuron()
     {
-        for(auto link: links_)
+        for(auto link: links)
             delete link;
     }
     
@@ -26,7 +26,7 @@ namespace tsp { namespace net {
         for(auto neuron: neurons)
         {
             tsplink* l = new tsplink(this, neuron);
-            links_.push_back(l);
+            links.push_back(l);
         }
     }
     

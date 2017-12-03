@@ -7,13 +7,17 @@
 //
 
 #include "tsplink.hpp"
+#include "../tspmath/tspmath.hpp"
+
+#include <iostream>
 
 namespace tsp { namespace net {
-
+    
     tsplink::tsplink(tspneuron* lhs, tspneuron* rhs)
     {
         left_ = lhs;
         right_ = rhs;
+        weight = math::randf(0.3);
     }
     
     tsplink::~tsplink()

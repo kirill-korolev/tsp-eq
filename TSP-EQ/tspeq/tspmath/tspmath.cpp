@@ -34,8 +34,36 @@ namespace tsp { namespace math {
         return x;
     }
     
-    double randf()
+    double randf(double max)
     {
-        return (double) rand() / RAND_MAX;
+        return max * (double) rand() / RAND_MAX;
     }
+    
+    double gaussian(double x, double e, double d)
+    {
+        return (1 / (sqrt(d) * sqrt(2 * M_PI))) * exp(-(pow(x - e, 2)) / (2 * d));
+    }
+    
+    double linear(double x, double k, double b)
+    {
+        return k * x + b;
+    }
+    
+    
+    double sigmoid_deriv(double x, double a)
+    {
+        return sigmoid(x, a) * (1 - sigmoid(x, a));
+    }
+    
+    double relu_deriv(double x)
+    {
+        return 1;
+    }
+    
+    double leaky_relu_deriv(double x, double a)
+    {
+        if(x < 0) return a;
+        return 1;
+    }
+    
 }}

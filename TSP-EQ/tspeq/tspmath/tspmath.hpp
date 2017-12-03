@@ -14,9 +14,14 @@ namespace tsp { namespace math {
     double tanh(double x);
     double relu(double x);
     double leaky_relu(double x, double a);
+    double gaussian(double x, double e, double d);
+    double linear(double x, double k, double b);
     
+    double randf(double max=1);
     
-    double randf();
+    double sigmoid_deriv(double x, double a);
+    double relu_deriv(double x);
+    double leaky_relu_deriv(double x, double a);
 }}
 
 #endif /* tspmath_hpp */

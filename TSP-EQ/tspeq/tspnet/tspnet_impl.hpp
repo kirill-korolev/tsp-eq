@@ -6,17 +6,32 @@
 //  Copyright © 2017 Kirill Korolev. All rights reserved.
 //
 
+#pragma once
+
+#include "tspset.hpp"
+#include "tspmath.hpp"
+
 namespace tsp { namespace net{
-    
+
     template <size_t Layers>
-    tspnet<Layers>::tspnet(std::array<uint, Layers> neurons)
+    tspnet<Layers>::tspnet(std::array<uint, Layers> neurons, double learning_rate)
     {
+        learning_rate_ = learning_rate;
+        
         outputLayer_ = new tspoutput(neurons[Layers - 1]);
         tsplayer* next = outputLayer_;
         
-        for(int i = 1; i < Layers - 1; ++i)
+        for(int i = Layers - 2; i > 0; --i)
         {
-            tsplayer* layer = new tsplayer(neurons[i], next);
+            tsplayer* layer = new tsplayer(neurons[i], nullptr, next);
+            
+            if(i == Layers - 2) {
+                outputLayer_->setPrev(layer);
+            }
+            else{
+                next->setPrev(layer);
+            }
+            
             hiddenLayers_.push_back(layer);
             next = layer;
         }
@@ -36,10 +51,30 @@ namespace tsp { namespace net{
     }
     
     template <size_t Layers>
-    template <typename... Args>
-    void tspnet<Layers>::train(const itspset<Args...>& set)
+    void tspnet<Layers>::set_function(math::tspifunction* func){
+        
+        for(int i = 0; i < hiddenLayers_.size(); ++i)
+            hiddenLayers_[i]->func = func;
+    }
+    
+    template <size_t Layers>
+    void tspnet<Layers>::set_out_function(math::tspifunction* func){
+        outputLayer_->func = func;
+    }
+
+    
+    template <size_t Layers>
+    void tspnet<Layers>::train(const set::tsprow& row)
     {
-        inputLayer_->init(set);
+        tempRow_ = &row;
+        outputLayer_->delegate = this;
+        inputLayer_->feed(row);
+    }
+    
+    
+    template <size_t Layers>
+    void tspnet<Layers>::didFinishedComputations(){
+        outputLayer_->initLearning(learning_rate_, *tempRow_);
     }
     
 }}

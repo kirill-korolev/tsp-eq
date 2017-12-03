@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		ED209EFD1FC2EFA9006F4D1F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED209EFC1FC2EFA9006F4D1F /* main.cpp */; };
+		ED6F144C1FCC461E00589B60 /* tspmath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED6F144B1FCC461E00589B60 /* tspmath.cpp */; };
+		ED6F14611FCF887A00589B60 /* csvwriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED6F145F1FCF887A00589B60 /* csvwriter.cpp */; };
+		ED6F14631FD01E7200589B60 /* dataset_generation.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ED6F14621FD01E7200589B60 /* dataset_generation.hpp */; };
+		ED826BD81FD0B5E90095D994 /* tspfunction_impl.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ED826BD61FD0B5E90095D994 /* tspfunction_impl.hpp */; };
 		EDCB9E8F1FC336C700C5C8A4 /* csvparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDCB9E8D1FC336C700C5C8A4 /* csvparser.cpp */; };
 		EDCB9E961FC33B3400C5C8A4 /* tspnet_impl.hpp in Sources */ = {isa = PBXBuildFile; fileRef = EDCB9E951FC33B3400C5C8A4 /* tspnet_impl.hpp */; };
 		EDCB9E9C1FC33BBF00C5C8A4 /* tsplayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDCB9E9A1FC33BBF00C5C8A4 /* tsplayer.cpp */; };
@@ -31,6 +35,15 @@
 /* Begin PBXFileReference section */
 		ED209EF91FC2EFA9006F4D1F /* TSP-EQ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "TSP-EQ"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED209EFC1FC2EFA9006F4D1F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		ED6F144A1FCC461E00589B60 /* tspmath.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tspmath.hpp; path = tspeq/tspmath/tspmath.hpp; sourceTree = "<group>"; };
+		ED6F144B1FCC461E00589B60 /* tspmath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tspmath.cpp; path = tspeq/tspmath/tspmath.cpp; sourceTree = "<group>"; };
+		ED6F145A1FCF374A00589B60 /* tspfeature.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tspfeature.hpp; path = tspeq/tspset/tspfeature.hpp; sourceTree = "<group>"; };
+		ED6F145D1FCF4E0700589B60 /* tsputils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tsputils.hpp; path = tspeq/tspset/tsputils.hpp; sourceTree = "<group>"; };
+		ED6F145F1FCF887A00589B60 /* csvwriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = csvwriter.cpp; path = csvparser/csvwriter.cpp; sourceTree = "<group>"; };
+		ED6F14601FCF887A00589B60 /* csvwriter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = csvwriter.hpp; path = csvparser/csvwriter.hpp; sourceTree = "<group>"; };
+		ED6F14621FD01E7200589B60 /* dataset_generation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dataset_generation.hpp; sourceTree = "<group>"; };
+		ED826BD61FD0B5E90095D994 /* tspfunction_impl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tspfunction_impl.hpp; path = tspeq/tspmath/tspfunction_impl.hpp; sourceTree = "<group>"; };
+		ED826BD71FD0B5E90095D994 /* tspfunction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tspfunction.hpp; path = tspeq/tspmath/tspfunction.hpp; sourceTree = "<group>"; };
 		EDCB9E8D1FC336C700C5C8A4 /* csvparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = csvparser.cpp; path = csvparser/csvparser.cpp; sourceTree = "<group>"; };
 		EDCB9E8E1FC336C700C5C8A4 /* csvparser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = csvparser.hpp; path = csvparser/csvparser.hpp; sourceTree = "<group>"; };
 		EDCB9E941FC33B3400C5C8A4 /* tspnet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tspnet.hpp; path = tspeq/tspnet/tspnet.hpp; sourceTree = "<group>"; };
@@ -43,7 +56,6 @@
 		EDCB9EA11FC33DC300C5C8A4 /* tsplink.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tsplink.hpp; path = tspeq/tspnet/tsplink.hpp; sourceTree = "<group>"; };
 		EDD33C431FC4CCFD008C9447 /* tspset_impl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tspset_impl.hpp; path = tspeq/tspset/tspset_impl.hpp; sourceTree = "<group>"; };
 		EDD33C441FC4CCFD008C9447 /* tspset.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tspset.hpp; path = tspeq/tspset/tspset.hpp; sourceTree = "<group>"; };
-		EDD33C471FC4CFA1008C9447 /* itspset.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = itspset.hpp; path = tspeq/tspset/itspset.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,7 @@
 				EDCB9E8C1FC336BD00C5C8A4 /* csvparser */,
 				ED209F031FC2EFB3006F4D1F /* tspeq */,
 				ED209EFC1FC2EFA9006F4D1F /* main.cpp */,
+				ED6F14621FD01E7200589B60 /* dataset_generation.hpp */,
 			);
 			path = "TSP-EQ";
 			sourceTree = "<group>";
@@ -86,10 +99,22 @@
 		ED209F031FC2EFB3006F4D1F /* tspeq */ = {
 			isa = PBXGroup;
 			children = (
+				ED6F14461FCC31E600589B60 /* tspmath */,
 				EDD33C421FC4CCE8008C9447 /* tspset */,
 				EDCB9E901FC33A0A00C5C8A4 /* tspnet */,
 			);
 			name = tspeq;
+			sourceTree = "<group>";
+		};
+		ED6F14461FCC31E600589B60 /* tspmath */ = {
+			isa = PBXGroup;
+			children = (
+				ED6F144A1FCC461E00589B60 /* tspmath.hpp */,
+				ED6F144B1FCC461E00589B60 /* tspmath.cpp */,
+				ED826BD61FD0B5E90095D994 /* tspfunction_impl.hpp */,
+				ED826BD71FD0B5E90095D994 /* tspfunction.hpp */,
+			);
+			name = tspmath;
 			sourceTree = "<group>";
 		};
 		EDCB9E8C1FC336BD00C5C8A4 /* csvparser */ = {
@@ -97,6 +122,8 @@
 			children = (
 				EDCB9E8D1FC336C700C5C8A4 /* csvparser.cpp */,
 				EDCB9E8E1FC336C700C5C8A4 /* csvparser.hpp */,
+				ED6F145F1FCF887A00589B60 /* csvwriter.cpp */,
+				ED6F14601FCF887A00589B60 /* csvwriter.hpp */,
 			);
 			name = csvparser;
 			sourceTree = "<group>";
@@ -119,9 +146,10 @@
 		EDD33C421FC4CCE8008C9447 /* tspset */ = {
 			isa = PBXGroup;
 			children = (
-				EDD33C471FC4CFA1008C9447 /* itspset.hpp */,
 				EDD33C431FC4CCFD008C9447 /* tspset_impl.hpp */,
 				EDD33C441FC4CCFD008C9447 /* tspset.hpp */,
+				ED6F145A1FCF374A00589B60 /* tspfeature.hpp */,
+				ED6F145D1FCF4E0700589B60 /* tsputils.hpp */,
 			);
 			name = tspset;
 			sourceTree = "<group>";
@@ -184,11 +212,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED826BD81FD0B5E90095D994 /* tspfunction_impl.hpp in Sources */,
 				EDCB9E9C1FC33BBF00C5C8A4 /* tsplayer.cpp in Sources */,
 				ED209EFD1FC2EFA9006F4D1F /* main.cpp in Sources */,
+				ED6F14631FD01E7200589B60 /* dataset_generation.hpp in Sources */,
 				EDCB9E961FC33B3400C5C8A4 /* tspnet_impl.hpp in Sources */,
 				EDCB9E8F1FC336C700C5C8A4 /* csvparser.cpp in Sources */,
+				ED6F14611FCF887A00589B60 /* csvwriter.cpp in Sources */,
 				EDD33C451FC4CCFD008C9447 /* tspset_impl.hpp in Sources */,
+				ED6F144C1FCC461E00589B60 /* tspmath.cpp in Sources */,
 				EDCB9E9F1FC33BDC00C5C8A4 /* tspneuron.cpp in Sources */,
 				EDCB9EA21FC33DC300C5C8A4 /* tsplink.cpp in Sources */,
 			);
@@ -290,8 +322,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = AW37662HE7;
-				HEADER_SEARCH_PATHS = "";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -301,8 +333,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = AW37662HE7;
-				HEADER_SEARCH_PATHS = "";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

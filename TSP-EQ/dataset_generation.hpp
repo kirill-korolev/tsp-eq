@@ -1,15 +1,25 @@
 //
-//  dataset_generation.cpp
+//  dataset_generation.hpp
 //  TSP-EQ
 //
 //  Created by Kirill Korolev on 30/11/2017.
 //  Copyright © 2017 Kirill Korolev. All rights reserved.
 //
 
-#include "dataset_generation.h"
+#ifndef dataset_generation_h
+#define dataset_generation_h
 
+#include <iostream>
+#include <vector>
+#include <boost/any.hpp>
+#include "csvparser/csvwriter.hpp"
+#include "tspeq/tspset/tspset.hpp"
+#include "tspeq/tspset/tspfeature.hpp"
+#include "tspeq/tspmath/tspmath.hpp"
 
-namespace  {
+using tsp::set::tspfeature;
+
+namespace {
 
     std::vector<double> average(const tsp::set::tspset& set){
         std::vector<double> sum(set.front().size(), 0);
@@ -31,20 +41,21 @@ namespace  {
         double f = y / x;
         return tsp::math::sigmoid(std::pow(10, 9) * std::pow(f - 1, 3), 1);
     }
-
-    void generate_dataset(const char* inputFile, const char* outputFile, size_t rows_division, size_t rows_average){
+    
+    template <typename... Features>
+    void generate_dataset(const char* inputFile, const char* outputFile, size_t rows_division, size_t rows_average, Features... features){
         
         //Dataset reading
-        auto dataset = tsp::set::make_set(inputFile, tspfeature<double>("Weighted_Price"));
+        auto dataset = tsp::set::make_set(inputFile, features...);
         
-        size_t rows = std::ceil((double)dataset.size() / rows_division);
+        size_t rows = dataset.size() / rows_division;
         
         using tspsetd = std::vector<std::vector<double>>;
         std::vector<tspsetd> gen_rows;
         
         for(int i = 0; i < rows; ++i){
             
-            //Data for the last 24 hours
+            //Data for the last N hours
             auto last_set = tsp::set::get_last_rows(dataset, rows_division * (i + 1), rows_division);
             
             //Division on subsequences
@@ -56,11 +67,11 @@ namespace  {
             auto p1 = average(intervals.front());
             
             //Increment of each interval
-            for(int i = 1; i < intervals.size(); ++i){
-                auto p2 = average(intervals[i]);
+            for(int k = 1; k < intervals.size(); ++k){
+                auto p2 = average(intervals[k]);
                 
                 for(int j = 0; j < p1.size(); ++j){
-                    deriv[i - 1][j] = normalize(p1[j], p2[j]);
+                    deriv[k - 1][j] = normalize(p1[j], p2[j]);
                 }
                 
                 p1 = p2;
@@ -74,3 +85,5 @@ namespace  {
     }
 
 }
+
+#endif /* dataset_generation_h */

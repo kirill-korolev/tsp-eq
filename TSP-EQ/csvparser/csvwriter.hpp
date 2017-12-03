@@ -9,6 +9,22 @@
 #ifndef csvwriter_hpp
 #define csvwriter_hpp
 
-#include <stdio.h>
+#include <vector>
+#include <string>
+#include <iostream>
+#include <fstream>
+
+namespace csv{
+    
+    class Writer{
+    public:
+        typedef std::vector<std::vector<std::vector<double>>> data_format;
+        Writer(const char* fileName, const data_format& data);
+        Writer(const Writer&)=delete;
+        Writer& operator=(const Writer&)=delete;
+    private:
+        const int buffer_size = 10000;
+    };
+}
 
 #endif /* csvwriter_hpp */

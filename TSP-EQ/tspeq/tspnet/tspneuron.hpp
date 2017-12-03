@@ -21,9 +21,9 @@ namespace tsp { namespace net {
         tspneuron();
         ~tspneuron();
         void link(std::vector<tspneuron*> neurons);
-    private:
-        std::vector<tsplink*> links_;
-        
+        std::vector<tsplink*> links;
+        double net = 0.0;
+        double out = 0.0;
     };
     
 }}

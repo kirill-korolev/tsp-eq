@@ -11,25 +11,28 @@
 
 #include <array>
 #include <vector>
-#include "../tspset/itspset.hpp"
+#include "tspfunction.hpp"
 #include "tsplayer.hpp"
 
-using tsp::set::itspset;
-
 namespace tsp { namespace net {
-
+    
     template <size_t Layers>
-    class tspnet
+    class tspnet: public itask
     {
     public:
-        tspnet(std::array<uint32_t, Layers> neurons);
+        tspnet(std::array<uint32_t, Layers> neurons, double learning_rate);
         ~tspnet();
         tspnet(const tspnet&)=delete;
         tspnet& operator=(const tspnet&)=delete;
         
-        template <typename... Args>
-        void train(const itspset<Args...>& set);
+        void set_function(math::tspifunction* func);
+        void set_out_function(math::tspifunction* func);
+        void train(const set::tsprow& row);
+        
+        void didFinishedComputations() override;
     private:
+        const set::tsprow* tempRow_ = nullptr;
+        double learning_rate_;
         tspinput* inputLayer_;
         tspoutput* outputLayer_;
         std::vector<tsplayer*> hiddenLayers_;

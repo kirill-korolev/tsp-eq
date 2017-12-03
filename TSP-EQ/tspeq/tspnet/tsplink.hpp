@@ -18,6 +18,7 @@ namespace tsp { namespace net{
     public:
         tsplink(tspneuron* lhs, tspneuron* rhs);
         ~tsplink();
+        double weight;
     private:
         tspneuron* left_;
         tspneuron* right_;
