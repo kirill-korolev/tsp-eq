@@ -1,0 +1,26 @@
+﻿<Window x:Class="TSP.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TSP.UI"
+        mc:Ignorable="d"
+        xmlns:oxy="clr-namespace:OxyPlot.Wpf;assembly=OxyPlot.Wpf"
+        Title="MainWindow" Height="540" Width="960">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Vertical" Margin="10">
+            <TextBlock Text="Last Update" FontFamily="Myriad Pro" FontSize="16" Margin="0, 0, 0, 10" />
+            <TextBlock Text="{Binding Path=CurrentState.Time, UpdateSourceTrigger=PropertyChanged, StringFormat=\{0:MMM dd\, HH:mm \}, IsAsync=True}" FontFamily="Myriad Pro" FontSize="12" />
+            <TextBlock Text="{Binding Path=CurrentState.Currency.Rate, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0}$, IsAsync=True}" FontFamily="Myriad Pro" FontSize="14" />
+        </StackPanel>
+
+        <oxy:PlotView Grid.Row="1" Model="{Binding Path=PlotModel, UpdateSourceTrigger=PropertyChanged, IsAsync=True}">
+        </oxy:PlotView>
+    </Grid>
+</Window>
