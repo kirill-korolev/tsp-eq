@@ -42,12 +42,12 @@ namespace TSPNeuralNet {
 	{
 		learningRate_ = learningRate;
 
-		outputLayer_ = new tspoutput(neurons[Layers - 1]);
-		tsplayer* next = outputLayer_;
+		outputLayer_ = new TspOutput(neurons[Layers - 1]);
+		TspLayer* next = outputLayer_;
 
 		for (int i = Layers - 2; i > 0; --i)
 		{
-			tsplayer* layer = new tsplayer(neurons[i], nullptr, next);
+			TspLayer* layer = new TspLayer(neurons[i], nullptr, next);
 
 			if (i == Layers - 2) {
 				outputLayer_->setPrev(layer);
@@ -60,7 +60,7 @@ namespace TSPNeuralNet {
 			next = layer;
 		}
 
-		inputLayer_ = new tspinput(neurons[0], next);
+		inputLayer_ = new TspInput(neurons[0], next);
 
 		outputLayer_->delegate = this;
 	}

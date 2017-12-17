@@ -61,7 +61,6 @@ namespace TSP.UI
 
         private async Task UpdateModel()
         {
-
             double min = currentState.Min(o => o.Currency.Rate);
             double max = currentState.Max(o => o.Currency.Rate);
             double size = currentState.Count;

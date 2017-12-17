@@ -107,7 +107,7 @@ namespace TSPNeuralNet { namespace Set {
 
 
 		template <typename T, size_t Index, size_t Size>
-		auto makeSet(const char* fileName) -> TspSet {
+		inline auto makeSet(const char* fileName) -> TspSet {
 			Parser parser(fileName);
 			std::vector<std::vector<double>> result;
 
@@ -121,7 +121,7 @@ namespace TSPNeuralNet { namespace Set {
 		}
 
 		template <size_t Index, size_t Size, typename... Features>
-		auto makeSet(const char* fileName, Features... features) ->
+		inline auto makeSet(const char* fileName, Features... features) ->
 			TspSet
 		{
 			Parser parser(fileName);
@@ -142,7 +142,7 @@ namespace TSPNeuralNet { namespace Set {
 		}
 
 
-		TspSet getLastRows(const TspSet& set, uint index, size_t n)
+		inline TspSet getLastRows(const TspSet& set, uint index, size_t n)
 		{
 			try {
 				TspSet s(set.begin() + index - n, set.begin() + index);
@@ -154,7 +154,7 @@ namespace TSPNeuralNet { namespace Set {
 			}
 		}
 
-		std::vector<TspSet> divide(const TspSet& set, size_t size)
+		inline std::vector<TspSet> divide(const TspSet& set, size_t size)
 		{
 			size_t set_size = set.size();
 			size_t pieces = std::ceil((double)set_size / size);

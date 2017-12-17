@@ -38,7 +38,7 @@ namespace TSPNeuralNet { namespace Math {
 		}
 
 		double func(double x, std::tuple<Params...>& tup, bool isAntiDer) {
-			return func(x, tup, Utils::gen_seq<sizeof...(Params)>{}, isAntiDer);
+			return func(x, tup, Utils::genSeq<sizeof...(Params)>{}, isAntiDer);
 		}
 
 		double(*f_)(double, Params...);
