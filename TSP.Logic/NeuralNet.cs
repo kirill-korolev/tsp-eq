@@ -28,7 +28,8 @@ namespace TSP.Logic
         private static NeuralNet instance;
 
         public static NeuralNet GetInstance() {
-            return instance ?? new NeuralNet();
+            if (instance == null) instance = new NeuralNet();
+            return instance;
         }
 
         public async Task<List<double>> GetResultsAsync(List<double> inputs) {
@@ -46,7 +47,7 @@ namespace TSP.Logic
             }
 
             if (isDisposing) {
-                GC.SuppressFinalize(isDisposing);
+                GC.SuppressFinalize(this);
             }
         }
 

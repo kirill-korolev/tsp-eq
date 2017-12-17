@@ -61,6 +61,7 @@ namespace TSP.UI
 
         private async Task UpdateModel()
         {
+
             double min = currentState.Min(o => o.Currency.Rate);
             double max = currentState.Max(o => o.Currency.Rate);
             double size = currentState.Count;
@@ -72,7 +73,19 @@ namespace TSP.UI
                 plotModel.AddPoint(x, obj.Currency.Rate);
             }
 
-            await NeuralNet.GetInstance().GetResultsAsync(plotModel.Points.Select(dataPoint => dataPoint.Y).ToList());
+            try {
+                var results = await NeuralNet.GetInstance().GetResultsAsync(plotModel.Points.Select(dataPoint => dataPoint.Y).ToList());
+
+                double lastX = plotModel.Points.LastOrDefault().X;
+
+                foreach (var y in results) {
+                    plotModel.AddPoint(lastX, y);
+                    lastX++;
+                }
+            } catch(DllNotFoundException e) {
+                Console.WriteLine(e.ToString());
+            }
+
         }
 
     }

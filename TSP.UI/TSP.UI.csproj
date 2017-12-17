@@ -54,9 +54,6 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="TSP.Logic">
-      <HintPath>..\TSP.Logic\bin\Debug\TSP.Logic.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -113,6 +110,10 @@
     <ProjectReference Include="..\TSP.API\TSP.API.csproj">
       <Project>{5D5AAFBA-0ADF-41C8-87F6-E0C988B1F886}</Project>
       <Name>TSP.API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TSP.Logic\TSP.Logic.csproj">
+      <Project>{DAC5C5A1-8A30-4B49-8356-2EE51AB2DC9F}</Project>
+      <Name>TSP.Logic</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
