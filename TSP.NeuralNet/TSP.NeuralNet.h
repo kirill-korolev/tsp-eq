@@ -25,6 +25,7 @@ namespace TSPNeuralNet {
 		void initWeights(const std::vector<std::vector<double>>& weights);
 
 		void didFinishedComputations() override;
+		void didFinishedTesting(const Set::TspRow& answers) override;
 	private:
 		const Set::TspRow* tempRow_ = nullptr;
 		double learningRate_;
@@ -91,18 +92,27 @@ namespace TSPNeuralNet {
 
 	template <size_t Layers>
 	void TspNet<Layers>::train(const Set::TspRow& row) {
+		mode = ComputingMode::Learning;
 		tempRow_ = &row;
 		inputLayer_->feed(row);
 	}
 
 	template<size_t Layers>
 	Set::TspRow TspNet<Layers>::test(const Set::TspRow& row) {
-		
+		mode = ComputingMode::Testing;
+		inputLayer_->feed(row);
+		return tempRow_;
 	}
 
 	template<size_t Layers>
 	void TspNet<Layers>::initWeights(const std::vector<std::vector<double>>& weights) {
+		static_assert(weights.size() == hiddenLayers_.size() + 1);
 
+		inputLayer_->initWeights(weights.front());
+		
+		for (int i = 0; i < hiddenLayers_.size(); ++i) {
+			hiddenLayers_[i]->initWeights(weights[i + 1]);
+		}
 	}
 
 
@@ -110,4 +120,10 @@ namespace TSPNeuralNet {
 	void TspNet<Layers>::didFinishedComputations() {
 		outputLayer_->initLearning(learningRate_, *tempRow_);
 	}
+
+	template<size_t Layers>
+	void TspNet<Layers>::didFinishedTesting(const Set::TspRow& answers){
+		tempRow_ = &answers;
+	}
+
 }

@@ -10,9 +10,8 @@ namespace TSPNeuralNet {
 		TspLink(TspNeuron* lhs, TspNeuron* rhs);
 		~TspLink();
 		double weight;
-	private:
-		TspNeuron* left_;
-		TspNeuron* right_;
+		TspNeuron* left;
+		TspNeuron* right;
 	};
 
 }

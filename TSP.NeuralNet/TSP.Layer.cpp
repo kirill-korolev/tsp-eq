@@ -39,8 +39,14 @@ namespace TSPNeuralNet {
 		if (prevLayer_ != nullptr) {
 			for (int i = 0; i < prevLayer_->neurons_.size(); ++i) {
 				for (int j = 0; j < prevLayer_->neurons_[i]->links.size(); ++j) {
-					prevLayer_->neurons_[i]->links[j]->weight =
-						prevLayer_->neurons_[i]->links[j]->weight - learningRate * 1;
+
+					auto leftNeuron = prevLayer_->neurons_[i];
+					auto rightNeuron = leftNeuron->links[j]->right;
+
+					leftNeuron->error += leftNeuron->links[j]->weight * rightNeuron->error;
+
+					leftNeuron->links[j]->weight =
+						leftNeuron->links[j]->weight - learningRate * func->derivative(rightNeuron->net) * leftNeuron->out * rightNeuron->error;
 				}
 			}
 
@@ -74,6 +80,11 @@ namespace TSPNeuralNet {
 	TspNeuron* TspLayer::getNeuron(int i)
 	{
 		return neurons_[i];
+	}
+
+	void TspLayer::initWeights(const std::vector<double>& weights)
+	{
+
 	}
 
 	void TspLayer::setNext(TspLayer* layer) {
@@ -110,8 +121,23 @@ namespace TSPNeuralNet {
 
 	void TspOutput::feed()
 	{
-		if (delegate != nullptr)
-			delegate->didFinishedComputations();
+		if (delegate != nullptr) {
+			switch (delegate->mode) {
+			case IComputed::ComputingMode::Learning:
+				delegate->didFinishedComputations();
+				break;
+			case IComputed::ComputingMode::Testing:
+
+				Set::TspRow answers;
+
+				for (auto &item : neurons_) {
+					answers.push_back(item->out);
+				}
+
+				delegate->didFinishedTesting(answers);
+				break;
+			}
+		}
 	}
 
 	void TspOutput::initLearning(const double& learningRate, const Set::TspRow& row) {

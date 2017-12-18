@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSP.UI", "TSP.UI\TSP.UI.csproj", "{0CE35BAE-553A-410E-A954-68098E7BD3F2}"
 EndProject
@@ -11,7 +11,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSP.NeuralNet", "TSP.Neural
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSP.Logic", "TSP.Logic\TSP.Logic.csproj", "{DAC5C5A1-8A30-4B49-8356-2EE51AB2DC9F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSP.NeuralNetLibrary", "TSP.NeuralNetLibrary\TSP.NeuralNetLibrary.vcxproj", "{FF4A57A9-80F9-432C-8B99-66FAE2C51CD3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSP.NeuralNetLibrary", "TSP.NeuralNetLibrary\TSP.NeuralNetLibrary.vcxproj", "{19B846F2-F871-4A35-BB8F-5AAE32A11CFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +48,7 @@ Global
 		{5D5AAFBA-0ADF-41C8-87F6-E0C988B1F886}.Release|x86.ActiveCfg = Release|Any CPU
 		{5D5AAFBA-0ADF-41C8-87F6-E0C988B1F886}.Release|x86.Build.0 = Release|Any CPU
 		{140B8422-1944-4B23-938E-BAFFAD9DC079}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{140B8422-1944-4B23-938E-BAFFAD9DC079}.Debug|Any CPU.Build.0 = Debug|Win32
 		{140B8422-1944-4B23-938E-BAFFAD9DC079}.Debug|x64.ActiveCfg = Debug|x64
 		{140B8422-1944-4B23-938E-BAFFAD9DC079}.Debug|x64.Build.0 = Debug|x64
 		{140B8422-1944-4B23-938E-BAFFAD9DC079}.Debug|x86.ActiveCfg = Debug|Win32
@@ -69,16 +70,17 @@ Global
 		{DAC5C5A1-8A30-4B49-8356-2EE51AB2DC9F}.Release|x64.Build.0 = Release|Any CPU
 		{DAC5C5A1-8A30-4B49-8356-2EE51AB2DC9F}.Release|x86.ActiveCfg = Release|Any CPU
 		{DAC5C5A1-8A30-4B49-8356-2EE51AB2DC9F}.Release|x86.Build.0 = Release|Any CPU
-		{FF4A57A9-80F9-432C-8B99-66FAE2C51CD3}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{FF4A57A9-80F9-432C-8B99-66FAE2C51CD3}.Debug|x64.ActiveCfg = Debug|x64
-		{FF4A57A9-80F9-432C-8B99-66FAE2C51CD3}.Debug|x64.Build.0 = Debug|x64
-		{FF4A57A9-80F9-432C-8B99-66FAE2C51CD3}.Debug|x86.ActiveCfg = Debug|Win32
-		{FF4A57A9-80F9-432C-8B99-66FAE2C51CD3}.Debug|x86.Build.0 = Debug|Win32
-		{FF4A57A9-80F9-432C-8B99-66FAE2C51CD3}.Release|Any CPU.ActiveCfg = Release|Win32
-		{FF4A57A9-80F9-432C-8B99-66FAE2C51CD3}.Release|x64.ActiveCfg = Release|x64
-		{FF4A57A9-80F9-432C-8B99-66FAE2C51CD3}.Release|x64.Build.0 = Release|x64
-		{FF4A57A9-80F9-432C-8B99-66FAE2C51CD3}.Release|x86.ActiveCfg = Release|Win32
-		{FF4A57A9-80F9-432C-8B99-66FAE2C51CD3}.Release|x86.Build.0 = Release|Win32
+		{19B846F2-F871-4A35-BB8F-5AAE32A11CFB}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{19B846F2-F871-4A35-BB8F-5AAE32A11CFB}.Debug|Any CPU.Build.0 = Debug|Win32
+		{19B846F2-F871-4A35-BB8F-5AAE32A11CFB}.Debug|x64.ActiveCfg = Debug|x64
+		{19B846F2-F871-4A35-BB8F-5AAE32A11CFB}.Debug|x64.Build.0 = Debug|x64
+		{19B846F2-F871-4A35-BB8F-5AAE32A11CFB}.Debug|x86.ActiveCfg = Debug|Win32
+		{19B846F2-F871-4A35-BB8F-5AAE32A11CFB}.Debug|x86.Build.0 = Debug|Win32
+		{19B846F2-F871-4A35-BB8F-5AAE32A11CFB}.Release|Any CPU.ActiveCfg = Release|Win32
+		{19B846F2-F871-4A35-BB8F-5AAE32A11CFB}.Release|x64.ActiveCfg = Release|x64
+		{19B846F2-F871-4A35-BB8F-5AAE32A11CFB}.Release|x64.Build.0 = Release|x64
+		{19B846F2-F871-4A35-BB8F-5AAE32A11CFB}.Release|x86.ActiveCfg = Release|Win32
+		{19B846F2-F871-4A35-BB8F-5AAE32A11CFB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

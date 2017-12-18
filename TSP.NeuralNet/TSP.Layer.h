@@ -12,8 +12,15 @@ namespace TSPNeuralNet {
 
 	class IComputed {
 	public:
+
+		enum class ComputingMode {
+			Learning, Testing
+		};
+
 		virtual void didFinishedComputations() = 0;
+		virtual void didFinishedTesting(const Set::TspRow& answers) = 0;
 		virtual ~IComputed() {}
+		ComputingMode mode;
 	};
 
 	template <size_t Layers>
@@ -33,6 +40,8 @@ namespace TSPNeuralNet {
 		void reset() const;
 		size_t height() const;
 		TspNeuron* getNeuron(int i);
+
+		void initWeights(const std::vector<double>& weights);
 
 		void setNext(TspLayer* layer);
 		void setPrev(TspLayer* layer);

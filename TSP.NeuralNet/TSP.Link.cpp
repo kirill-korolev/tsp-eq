@@ -5,8 +5,8 @@ namespace TSPNeuralNet {
 
 	TspLink::TspLink(TspNeuron* lhs, TspNeuron* rhs)
 	{
-		left_ = lhs;
-		right_ = rhs;
+		left = lhs;
+		right = rhs;
 		weight = Math::TspMath::randf() - Math::TspMath::randf();
 	}
 

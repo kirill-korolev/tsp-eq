@@ -1,11 +1,12 @@
 #pragma once
-#define DllExport   __declspec( dllexport )
+#define DllExport __declspec( dllexport )
 
 #pragma comment (lib, "TSP.NeuralNet.lib")
 
-#include "TSP.Math.Math.h"
-#include "TSP.Math.Function.h"
-#include "TSP.NeuralNet.h"
+#include "../TSP.NeuralNet/TSP.Math.Math.h"
+#include "../TSP.NeuralNet/TSP.Math.Function.h"
+#include "../TSP.NeuralNet/TSP.Set.Set.h"
+#include "../TSP.NeuralNet/TSP.NeuralNet.h"
 
 using namespace TSPNeuralNet;
 
@@ -19,8 +20,8 @@ namespace Tsp {
 			net = new TspNet<3>({96, 144, 48}, 0.1);
 			net->setFunction(activation);
 			net->setOutFunction(activationOutput);
-
-			//net->initWeights();
+			auto weights = Set::makeSet<double>("weights.csv");
+			net->initWeights(weights);
 		}
 
 		~TspNeuralNet() {
