@@ -151,9 +151,6 @@
   <ItemGroup>
     <ClInclude Include="TspNeuralNet.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="TspNeuralNet.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

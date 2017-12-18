@@ -21,7 +21,7 @@ namespace TSPNeuralNet {
 		void setFunction(Math::ITspFunction* func);
 		void setOutFunction(Math::ITspFunction* func);
 		void train(const Set::TspRow& row);
-		void test(const Set::TspRow& row);
+		Set::TspRow test(const Set::TspRow& row);
 		void initWeights(const std::vector<std::vector<double>>& weights);
 
 		void didFinishedComputations() override;
@@ -90,15 +90,13 @@ namespace TSPNeuralNet {
 
 
 	template <size_t Layers>
-	void TspNet<Layers>::train(const Set::TspRow& row)
-	{
+	void TspNet<Layers>::train(const Set::TspRow& row) {
 		tempRow_ = &row;
 		inputLayer_->feed(row);
 	}
 
 	template<size_t Layers>
-	void TspNet<Layers>::test(const Set::TspRow& row)
-	{
+	Set::TspRow TspNet<Layers>::test(const Set::TspRow& row) {
 		
 	}
 

@@ -16,12 +16,21 @@ namespace Tsp {
 		TspNeuralNet() {
 			Math::ITspFunction* activation = new Math::TspFunction<double>(Math::TspMath::sigmoid, Math::TspMath::sigmoidDeriv, 1);
 			Math::ITspFunction* activationOutput = new Math::TspFunction<double>(Math::TspMath::sigmoid, Math::TspMath::sigmoidDeriv, 1);
-			net = new TspNet<3>({100, 144, 44}, 1.25);
+			net = new TspNet<3>({96, 144, 48}, 0.1);
+			net->setFunction(activation);
+			net->setOutFunction(activationOutput);
+
+			//net->initWeights();
 		}
 
 		~TspNeuralNet() {
 			delete net;
 		}
+
+		Set::TspRow getResults(const Set::TspRow& inputs) {
+			return net->test(inputs);
+		}
+
 
 	private:
 		TSPNeuralNet::TspNet<3> *net = nullptr;

@@ -72,18 +72,18 @@ namespace TSP.UI
                 plotModel.AddPoint(x, obj.Currency.Rate);
             }
 
-            try {
-                var results = await NeuralNet.GetInstance().GetResultsAsync(plotModel.Points.Select(dataPoint => dataPoint.Y).ToList());
+            //try {
+            //    var results = await NeuralNet.GetInstance().GetResultsAsync(plotModel.Points.Select(dataPoint => dataPoint.Y).ToList());
 
-                double lastX = plotModel.Points.LastOrDefault().X;
+            //    double lastX = plotModel.Points.LastOrDefault().X;
 
-                foreach (var y in results) {
-                    plotModel.AddPoint(lastX, y);
-                    lastX++;
-                }
-            } catch(DllNotFoundException e) {
-                Console.WriteLine(e.ToString());
-            }
+            //    foreach (var y in results) {
+            //        plotModel.AddPoint(lastX, y);
+            //        lastX++;
+            //    }
+            //} catch(DllNotFoundException e) {
+            //    Console.WriteLine(e.ToString());
+            //}
 
         }
 

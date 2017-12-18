@@ -32,7 +32,7 @@ namespace TSP.API
                 var parameters = new Dictionary<string, string> {
                     { "binSize", "5m" },
                     { "partial", "true" },
-                    { "count", "144" },
+                    { "count", "96" },
                     { "startTime", startTime.ToString(stringFormat) },
                     { "reverse", "false" },
                     { "symbol", "XBTUSD" }
