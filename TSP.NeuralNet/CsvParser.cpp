@@ -93,8 +93,8 @@ namespace csv {
 			row->push(it->substr(tokenStart, it->length() - tokenStart));
 
 			// if value(s) missing
-			if (row->size() != _header.size())
-				throw Error("corrupted data !");
+			//if (row->size() != _header.size())
+			//	throw Error("corrupted data !");
 			_content.push_back(row);
 		}
 	}

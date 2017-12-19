@@ -25,9 +25,6 @@ namespace TSPNeuralNet {
 		net = new TSPNeuralNet::TspNet<3>({ 96, 144, 48 }, 0.1);
 		net->setFunction(activation);
 		net->setOutFunction(out);
-		
-		auto weights = Set::makeSet("weights.csv");
-		net->initWeights(weights);
 	}
 
 	TspNeuralNetFabric::~TspNeuralNetFabric() {

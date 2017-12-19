@@ -54,7 +54,8 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="TSP.Logic">
+    <Reference Include="TSP.Logic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\TSP.Logic\bin\Debug\TSP.Logic.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />

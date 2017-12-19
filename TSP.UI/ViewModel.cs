@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 using TSP.API;
 using TSP.Logic;
 
@@ -50,6 +51,11 @@ namespace TSP.UI
             while (true)
             {
                 currentState = await apiController.RequestAsync();
+
+                if(currentState.Count == 0){
+                    MessageBox.Show("Can't download data from server");
+                }
+
                 CurrentState = currentState.LastOrDefault();
                 await UpdateModel();
                 await Task.Delay(1000 * 60 * 5); //Update every 5 minutes

@@ -24,14 +24,13 @@ namespace TSPNeuralNetLibrary {
 		}
 
 		std::vector<double> results = fabric->getResults(vectorInputs);
+		
+		Collections::Generic::List<double>^ listResults = gcnew Collections::Generic::List<double>();
 
-		array<double>^ ret = gcnew array<double>(results.size());
-
-		if (results.size()){
-			pin_ptr<double> dest = &ret[0];
-			std::memcpy(dest, &results[0], results.size() * sizeof(double));
+		for (int i = 0; i < results.size(); ++i) {
+			listResults->Add(results[i]);
 		}
 
-		return gcnew Collections::Generic::List<double>(ret);
+		return listResults;
 	}
 }

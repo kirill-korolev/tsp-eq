@@ -55,8 +55,7 @@ namespace TSPNeuralNet { namespace Set {
 namespace TSPNeuralNet { namespace Set {
 
 		template <typename FeatureType>
-		inline auto readRow(Row r, std::vector<int>& indexes, FeatureType f) ->
-			std::vector<double>
+		std::vector<double> readRow(Row r, std::vector<int>& indexes, FeatureType f)
 		{
 			std::vector<double> t;
 			auto value = r.getValue<typename FeatureType::f_type>(indexes.front());
@@ -65,16 +64,16 @@ namespace TSPNeuralNet { namespace Set {
 		}
 
 		template <typename FeatureType, typename... Features>
-		inline std::vector<double> readRow(Row r, std::vector<int>& indexes, FeatureType f, Features... features)
+		std::vector<double> readRow(Row r, std::vector<int>& indexes, FeatureType f, Features... features)			
 		{
-			auto t = read_row(r, indexes, f);
-			auto other = read_row(r, indexes, features...);
+			auto t = readRow(r, indexes, f);
+			auto other = readRow(r, indexes, features...);
 			t.insert(t.end(), other.begin(), other.end());
 			return t;
 		}
 
 		template <typename T>
-		inline std::vector<double> readRow(Row r)
+		std::vector<double> readRow(Row r)
 		{
 			std::vector<double> result;
 
@@ -161,7 +160,7 @@ namespace TSPNeuralNet { namespace Set {
 
 			std::vector<TspSet> sets;
 
-			for (int i = 0; i < pieces; ++i)
+			for (size_t i = 0; i < pieces; ++i)
 			{
 				TspSet::const_iterator p = set.begin() + (i + 1) * size;
 				TspSet subset(set.begin() + i * size, p < set.end() ? p : set.end());

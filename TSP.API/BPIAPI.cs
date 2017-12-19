@@ -25,7 +25,7 @@ namespace TSP.API
         {
             using (var client = new HttpClient()) {
 
-                var endTime = DateTime.Now.AddHours(-2);
+                var endTime = DateTime.Now.AddHours(-4);
                 var startTime = endTime.AddHours(-12);
                 var stringFormat = "yyyy-MM-dd hh:mm";
 

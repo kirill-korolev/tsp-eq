@@ -25,7 +25,8 @@ namespace TSP.Logic
         }
 
         public async Task<List<double>> GetResultsAsync(List<double> inputs) {
-            return neuralNet.GetResults();
+            var results = neuralNet.GetResults(inputs);
+            return results;
         } 
 
         public void Dispose() {
