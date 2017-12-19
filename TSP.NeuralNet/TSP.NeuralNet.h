@@ -101,12 +101,11 @@ namespace TSPNeuralNet {
 	Set::TspRow TspNet<Layers>::test(const Set::TspRow& row) {
 		mode = ComputingMode::Testing;
 		inputLayer_->feed(row);
-		return tempRow_;
+		return *tempRow_;
 	}
 
 	template<size_t Layers>
 	void TspNet<Layers>::initWeights(const std::vector<std::vector<double>>& weights) {
-		static_assert(weights.size() == hiddenLayers_.size() + 1);
 
 		inputLayer_->initWeights(weights.front());
 		

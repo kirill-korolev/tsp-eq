@@ -10,14 +10,14 @@ namespace TSP.Logic
     public class NeuralNet: IDisposable
     {
 
-        [DllImport("TSP.NeuralNetLibrary.dll")]
+        [DllImport("TSP.NeuralNetLib.dll")]
         private static extern IntPtr CreateInstance();
 
-        [DllImport("TSP.NeuralNetLibrary.dll")]
+        [DllImport("TSP.NeuralNetLib.dll")]
         private static extern void DisposeInstance(IntPtr instance);
 
-        [DllImport("TSP.NeuralNetLibrary.dll")]
-        private static extern void GetResults();
+        //[DllImport("TSP.NeuralNetLibrary.dll")]
+        //private static extern void GetResults();
 
         private IntPtr internalObject;
 
