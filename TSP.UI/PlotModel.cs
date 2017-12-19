@@ -28,26 +28,26 @@ namespace TSP.UI
         {
             points = new List<DataPoint>();
             lineSeries = new LineSeries();
-            InitSeries(lineSeries, points, () => SeriesDesigner.Update(lineSeries, OxyColors.SteelBlue, OxyColors.BlueViolet, MarkerType.Circle));
+            lineSeries.ItemsSource = points;
+            SeriesDesigner.Update(lineSeries, OxyColors.SteelBlue, OxyColors.BlueViolet, MarkerType.Circle);
+            Series.Add(lineSeries);
         }
         
         public void AddPoint(double x, double y)
         {
-            points.Add(new DataPoint(x, y));
+            points.Add(new DataPoint(x, y));            
         }
 
+
         public void SetSettings(double min, double max, double size) {
+            if (Axes.Count == 2) Axes.Clear();
             InitAxes(min, max, size);
         }
 
-        private void InitSeries(LineSeries series, List<DataPoint> itemsSource, Action action) {
-            series.ItemsSource = itemsSource;
-            action();
-            Series.Add(series);
-        }
 
         private void InitAxes(double min, double max, double size)
         {
+            
             var delta = max - min;
 
             var xAxis = new LinearAxis();
@@ -64,6 +64,7 @@ namespace TSP.UI
 
             Axes.Add(xAxis);
             Axes.Add(yAxis);
+            
         }
 
     }

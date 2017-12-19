@@ -46,7 +46,9 @@ namespace TSP.UI
         }
 
         private async Task LoadDataAsync() {
-            while (true) {
+
+            while (true)
+            {
                 currentState = await apiController.RequestAsync();
                 CurrentState = currentState.LastOrDefault();
                 await UpdateModel();
@@ -71,6 +73,8 @@ namespace TSP.UI
                 double x = plotModel.Points.Count > 0 ? plotModel.Points.Last().X + 1 : 0;
                 plotModel.AddPoint(x, obj.Currency.Rate);
             }
+
+            plotModel.PlotView.InvalidatePlot();
 
             try
             {

@@ -11,7 +11,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSP.NeuralNet", "TSP.Neural
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSP.Logic", "TSP.Logic\TSP.Logic.csproj", "{DAC5C5A1-8A30-4B49-8356-2EE51AB2DC9F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSP.NeuralNetLib", "TSP.NeuralNetLib\TSP.NeuralNetLib.vcxproj", "{84A44FD1-6278-4B79-9593-A0FBD5F37221}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSP.NeuralNetLibrary", "TSP.NeuralNetLibrary\TSP.NeuralNetLibrary.vcxproj", "{57607CFB-065D-4381-8BA6-67ACB2B4CA98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,16 +70,16 @@ Global
 		{DAC5C5A1-8A30-4B49-8356-2EE51AB2DC9F}.Release|x64.Build.0 = Release|Any CPU
 		{DAC5C5A1-8A30-4B49-8356-2EE51AB2DC9F}.Release|x86.ActiveCfg = Release|Any CPU
 		{DAC5C5A1-8A30-4B49-8356-2EE51AB2DC9F}.Release|x86.Build.0 = Release|Any CPU
-		{84A44FD1-6278-4B79-9593-A0FBD5F37221}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{84A44FD1-6278-4B79-9593-A0FBD5F37221}.Debug|x64.ActiveCfg = Debug|x64
-		{84A44FD1-6278-4B79-9593-A0FBD5F37221}.Debug|x64.Build.0 = Debug|x64
-		{84A44FD1-6278-4B79-9593-A0FBD5F37221}.Debug|x86.ActiveCfg = Debug|Win32
-		{84A44FD1-6278-4B79-9593-A0FBD5F37221}.Debug|x86.Build.0 = Debug|Win32
-		{84A44FD1-6278-4B79-9593-A0FBD5F37221}.Release|Any CPU.ActiveCfg = Release|Win32
-		{84A44FD1-6278-4B79-9593-A0FBD5F37221}.Release|x64.ActiveCfg = Release|x64
-		{84A44FD1-6278-4B79-9593-A0FBD5F37221}.Release|x64.Build.0 = Release|x64
-		{84A44FD1-6278-4B79-9593-A0FBD5F37221}.Release|x86.ActiveCfg = Release|Win32
-		{84A44FD1-6278-4B79-9593-A0FBD5F37221}.Release|x86.Build.0 = Release|Win32
+		{57607CFB-065D-4381-8BA6-67ACB2B4CA98}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{57607CFB-065D-4381-8BA6-67ACB2B4CA98}.Debug|x64.ActiveCfg = Debug|x64
+		{57607CFB-065D-4381-8BA6-67ACB2B4CA98}.Debug|x64.Build.0 = Debug|x64
+		{57607CFB-065D-4381-8BA6-67ACB2B4CA98}.Debug|x86.ActiveCfg = Debug|Win32
+		{57607CFB-065D-4381-8BA6-67ACB2B4CA98}.Debug|x86.Build.0 = Debug|Win32
+		{57607CFB-065D-4381-8BA6-67ACB2B4CA98}.Release|Any CPU.ActiveCfg = Release|Win32
+		{57607CFB-065D-4381-8BA6-67ACB2B4CA98}.Release|x64.ActiveCfg = Release|x64
+		{57607CFB-065D-4381-8BA6-67ACB2B4CA98}.Release|x64.Build.0 = Release|x64
+		{57607CFB-065D-4381-8BA6-67ACB2B4CA98}.Release|x86.ActiveCfg = Release|Win32
+		{57607CFB-065D-4381-8BA6-67ACB2B4CA98}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

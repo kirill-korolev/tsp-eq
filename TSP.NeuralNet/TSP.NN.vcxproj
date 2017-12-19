@@ -29,6 +29,7 @@
     <ClInclude Include="TSP.Neuron.h" />
     <ClInclude Include="TSP.Set.Feature.h" />
     <ClInclude Include="TSP.Set.Set.h" />
+    <ClInclude Include="TspNeuralNetFabric.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CsvParser.cpp" />
